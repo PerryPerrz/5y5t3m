@@ -1,0 +1,50 @@
+DD gros et lent
+Méme centrale Vive, taille ok
+Truc proc petit mais rapide
+Mémoire virtuelle 16 cases alors que dd 8 cases
+
+Algo de remplacement : qd mc full, on doit jarter qqch de la mem c pr faciliter son accès
+(ton plus vieux etc)
+
+Proc demande accès à la page 3, page 3 pas dans pc on doit la mettre mais mc est full à la place de quel autres pages ?
+
+optimal : se placer dans le futur, 02563 on enlève pas les pages qu'on va avoir besoin plus tard, on jarte le 1 du coup pk on en aura plus besoin
+
+iréalisable : peux pas prévoir les demandes d'accès que va demander le proc
+
+Objectif du jeu : minimiser le nombre de défaut de pages (on juge un algo à son nombre de défaut de pages)
+
+Théoriquement, l'algo optimal à le nombre de défaut de page le plus faible, car il est optimal
+
+FIFO : celle que l'on à chargée la plus longtemps (chargée en premier) peut gérer ça avec une pile
+
+LRU : pile/compteur etc (peux gérer)
+
+ancienneté : pas ancienneté de chargement, anciennté de lecture, depuis cmb de temps on à pas accédés à la page là
+
+ici, enlève pile au moment ou je devrais les lire, pas de pot
+
+Viellissement, amélio de lru 
+
+idée : prendre ceux qui ont le moins d'accès, première des cases des moins d'accès, rajeunis le plus vieux 
+
+viellisement, de temps en temps remet à 0 les compteurs pr éviter les pages/compteurs fossiles
+
+un truc qui sera appeler 4 fois puis plus jamaus se fera jamais jarter alors qu'il se plus jamais utiliser mais il aura un compteur d'accès énorme.
+
+
+algo de l'horloge/seconde chance 
+
+à chaque lecture/hit : bit de ref passe à 1 (redonne sa seconde chance)
+défaut : prend sa seconde chance pas à 0 on continue de lire la suite, celui à 0 bouge.
+etc
+quand ils ont tous une seconde chance, on leurs enlève tous leurs secondes chances et jarte le premier
+
+quand on ajoute un truc dans la mc, on lui met sa seconde chance à 1.
+ tous à 1 : je n'est pas trouvé (tous à 0 mtn) je recommence donc on recommence et là on jarte le premier pck il est à 0, le premier venu à 0.
+ "demande d'accès à 5, elle est déjà dans la mc, passe son bit de ref à 1 si déjà à 1 change rien."
+ DERNIERE CIGARETTE AVANT DE MOURIR. 
+
+
+
+chaque algo se vaut, dépend du contexte

@@ -1,0 +1,23 @@
+---------- Système 2 ----------
+
+Projet de Système 2 | 08/12/2021
+Hugo Iopeti
+
+-----------------------------
+
+Démarrage
+
+Pour lancer le programme, il faut ouvrir un terminal dans le dossier contenant le programme.
+Un makefile est à disposition, ce qui rend l'exécution plus facile.
+
+Dans ce terminal, il vous faut rentrer la commande "make"
+
+Puis, appeler le fichier exécutable, en faisant ./monfichierexecutablefinal x
+
+x correspond à la taille du tableau, elle sera multiplié par 2 lors de l'exécution du programme.
+
+Si aucune valeur n'est fournit, une valeur par défaut sera appliqué, celle ci vaut 10.
+
+Pour nettoyer les fichiers compilés lors de l'exécution du programme, il suffit d'écrire "make clean" dans le terminal.
+
+-----------------------------

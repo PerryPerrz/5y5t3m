@@ -1,0 +1,8 @@
+Le chevron change les descripteurs en gros entre 2 processus, il lie.
+on a un prog écriture.c et sans avoir à toucher celui ci, on veut rediriger sa sortie. Au lieu d'afficher bonjour sur le terminal, on écrit bonjour dans un txt. JUSTE EN CHANGEANT LES DESCRIPTEURS DES SORTIES STANDARTS, SANS TOUCHER AU CODE!
+
+but : écrire bonjour dans truc.txt.
+écriteur.c écrit bonjour
+machin.c fait la redirection
+
+En C, tous les cases d'un switch sont fait, sauf si on break à la fin. (pue la mort)

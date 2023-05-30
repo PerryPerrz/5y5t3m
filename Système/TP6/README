@@ -1,0 +1,19 @@
+---------- Système ----------
+
+TP Final de Système | 01/06/2021
+Hugo Iopeti
+
+-----------------------------
+
+Démarrage
+
+Pour lancer le programme, il faut ouvrir un terminal dans le dossier contenant le programme.
+Un makefile est à disposition, ce qui rend l'exécution plus facile.
+
+Dans ce terminal, il vous faut rentrer la commande "make"
+
+Puis, appeler le fichier exécutable, en faisant ./TP6_ma TP6_cailloux.txt
+
+Pour nettoyer les fichiers compilés lors de l'exécution du programme, il suffit d'écrire "make clean" dans le terminal.
+
+-----------------------------

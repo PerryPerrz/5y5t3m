@@ -1,0 +1,19 @@
+---------- Système 2 ----------
+
+TP noté de Système 2 | 03/01/2022
+Hugo Iopeti
+
+-----------------------------
+
+Démarrage
+
+Pour lancer le programme, il faut ouvrir un terminal dans le dossier contenant le programme.
+Un makefile est à disposition, ce qui rend l'exécution plus facile.
+
+Dans ce terminal, il vous faut rentrer la commande "make"
+
+Puis, ❯ ./serveur & ./client 0 & ./client 1 & ./client 2 & ./client 3
+
+Pour nettoyer les fichiers compilés lors de l'exécution du programme, il suffit d'écrire "make clean" dans le terminal.
+
+-----------------------------

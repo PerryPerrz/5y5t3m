@@ -1,0 +1,25 @@
+---------- Système ----------
+
+TP Final de Système | 17/05/2021
+Hugo Iopeti
+
+-----------------------------
+
+Démarrage
+
+Pour lancer le programme, il faut ouvrir un terminal dans le dossier contenant le programme.
+Un makefile est à disposition, ce qui rend l'exécution plus facile.
+
+Dans ce terminal, il vous faut rentrer la commande "make"
+
+Puis, appeler le fichier exécutable, en faisant ./main nom_image_a_copier.bmp nom_de_la_copie.bmp
+
+Attention, l'image doit se trouver dans le même dossier que le programme.
+
+De plus, pour fonctionner, le programme a besoin d'une image au format bmp.
+
+Pour nettoyer les fichiers compilés lors de l'exécution du programme, il suffit d'écrire "make clean" dans le terminal.
+
+J'ai également ajouté des ressources supplémentaires pour tester mon programme : une autre image au format bmp et une image au format png.
+
+-----------------------------

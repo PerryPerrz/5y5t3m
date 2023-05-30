@@ -1,0 +1,48 @@
+Pastille 1 : 
+
+Oui, 2 fichiers!= peuvent avoir le même i-nodes : vu qu'il depend du dd, si on à 2DD, on peut avoir 2 numéro 0, 1 pour chaque DD.
+
+Exemple : même foc ouvert par team/lecteur de pdf/open board 
+s'il sont modifié, il seront avertis d'un possible changement
+
+descripteur = entier qui donne la relation entre un fichier et un proc : décrit la façon dont le fichier et manip par le proc (proc = prog que l'on à lancé)
+
+Table des descripteurs d'un processus ayant ouvert un fichier de i-node 10234 :
+4 fichiers : indice 0 : entrée standart, indice 1 : sortie standart, indice 2 : sortie erreur standart, indice 3 : fichier de i-node 10234
+
+Pastille 2 :
+
+Verrou : stystème qui permet de limiter/d'interdire une partie d'un fichier.
+Droit : sur tout le fichier
+
+Prop / Groupe / Autres
+admin = 3 premier bit
+tous les membres de son grp = 3 bit suivants
+ceux de pas de son groupe (autres) =  3 dernier bits
+tous les personnes ont un id et sont dans un groupe
+ex : si le proprio de ce fichier est un étu, alors tous les étu ont le même droit
+
+
+1 si le r est là pareil pr w et x
+0 si pas de r
+
+droit d'appli rwx = 111 = 7 r_x = 5 (101) appli est en 775 si add le d = 1775
+1755
+
+Pastille 3 : 
+setID passe l'id 1234 (user) à 0(super-user)
+donc possède les droits que le super-user à
+
+par exemple si on ouvre un term, l'id qui corres à celui-ci sera 1234.
+si il nous demande le mot de passe, accès au fichiers critiques donc on donne le mdp, il check si c'est bon, l'id fictif passe à 0, on à les droit du super-user.
+Le vrai id reste 1234 mais l'id fictif est 0.
+à la fin, l'id fictif disapear et l'id normale reprend tout le control.
+
+O_NONBLOCk Ignore les verrous
+Offset = curseur de lecture (cf Archi Offset décallage)
+LSEEK deplace le curseur (par exemple si on veut juste afficher le "o" de Bonjour)
+SEEk_SET 18 = mettre à la 18éme position
+
+fcntl : permet d'afficher les attributs de notre fichier
+stat : info de l'i-nodes
+pipe : met la sortie du truc de gauche sur l'entrée du truc de droite
